@@ -44,12 +44,43 @@ optional arguments:
   --version, -v         show program's version number and exit
   ```
   
-  
-  # Exemples
-  
+# Exemples
+
+## The easy way :
   By default `odmt` is looking for a `input` and a `output` folder at the working directory.
-  The easy way :
   - Create the `input` folder and copy into it the DXF files you want to merge together.
   - Create the `output` folder.
   - Execute the `odmt` tool.
   - And show the result at `./output/merged.dxf`.
+
+## Set input files and/or directories
+`odmt --input path/to/file1.dxf path/to/file2.xdf`
+`odmt --input path/to/dir1 path/to/file1.xdf path/to/dir2`
+(directories is allways scanned recursively)
+
+## Set output file
+`odmt --output new/output/destination`
+
+## Set search filters
+Merge only files matching this filters.
+`odmt --search *.dxf`
+`odmt --search *.merge.dxf *.scad.dxf`
+
+## Set ignore filters
+Set ignored files and/or directories filters.
+`odmt --ignore *.ignore.dxf`
+`odmt --ignore _*.dxf *backup* *old*`
+
+## Set colors table
+Set the indexed layers color table, see [AutoCAD Color Index](http://sub-atomic.com/~moses/acadcolors.html) for more information.
+`odmt --colors 1 2 3 20 90`
+
+## No layers
+If set, all files will be merged into the same layer.
+`odmt --nolayers`
+
+## Just convert LINE to POLYLINE
+By passing a single input file to `odmt` it is possible to just convert is continuous LINE to one POLYLINE.
+`odmt --input file.dxf --output new_file.dxf`
+or overwrite the old
+`odmt --input file.dxf --output file.dxf`
