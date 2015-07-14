@@ -9,7 +9,7 @@ No worries, the `odmt` tool tries to fill this gap. Written in Python with the h
 > This is my first python program, be cool and suggest improvements, thanks.
 
 # Installation
-Simply copy the `odmt` script (odmt.py) to your favorite location and install the [ezdxf](https://bitbucket.org/mozman/ezdxf) library.
+Simply copy the `odmt` script (odmt.py) to your favorite location and install the ezdxf library.
 ```
 pip install ezdxf
 ```
