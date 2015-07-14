@@ -1,5 +1,12 @@
 #!/usr/bin/python
 
+'''
+@license GPLv3
+@sources https://github.com/lautr3k/odmt
+@author  Sébastien Mischler <skarab>
+@author  http://www.onlfait.ch
+'''
+
 import argparse, os, sys, fnmatch, ezdxf
 
 # configuration
