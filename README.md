@@ -45,3 +45,11 @@ optional arguments:
   ```
   
   
+  # Exemples
+  
+  By default `odmt` is looking for a `input` and a `output` folder at the working directory.
+  The easy way :
+  - Create the `input` folder and copy into it the DXF files you want to merge together.
+  - Create the `output` folder.
+  - Execute the `odmt` tool.
+  - And show the result at `./output/merged.dxf`.
