@@ -8,6 +8,12 @@ No worries, the `odmt` tool tries to fill this gap. Written in Python with the h
 
 > This is my first python program, be cool and suggest improvements, thanks.
 
+<img src="http://pix.slic.it/p/3zq" title="3D build" width="150" />
+<img src="http://pix.slic.it/p/3zp" title="base.dxf" width="150" />
+<img src="http://pix.slic.it/p/3zr" title="holes.dxf" width="150" />
+<img src="http://pix.slic.it/p/3zo" title="pockets.dxf" width="150" />
+<img src="http://pix.slic.it/p/3zm" title="merged.dxf" width="615" />
+
 # Installation
 Simply copy the `odmt` script (odmt.py) to your favorite location and install the ezdxf library.
 ```
