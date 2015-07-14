@@ -17,7 +17,9 @@ ignore = ['*_ignore_*']
 
 # layers indexed colors
 # http://sub-atomic.com/~moses/acadcolors.html
-colors = map(str, range(10, 250, 10))
+colors = range(10)
+colors.extend(range(10, 250, 10))
+colors = map(str, colors)
 
 # command line parser
 parser = argparse.ArgumentParser(
