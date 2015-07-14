@@ -3,7 +3,7 @@
 '''
 @license GPLv3
 @sources https://github.com/lautr3k/odmt
-@author  Sebastien Mischler <skarab>
+@author  Sébastien Mischler <skarab>
 @author  http://www.onlfait.ch
 '''
 
