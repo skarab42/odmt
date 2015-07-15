@@ -2,7 +2,7 @@
 $fn  = 50;
 
 // export mode
-mode = "base";
+mode = "build";
 
 // base plate
 module base() {
