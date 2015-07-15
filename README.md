@@ -60,9 +60,14 @@ optional arguments:
   - And show the result at `./output/merged.dxf`.
 
 ## Set input files and/or directories
+One or more files :
 `odmt --input path/to/file1.dxf path/to/file2.xdf`
+
+Mixing files an directories :
 `odmt --input path/to/dir1 path/to/file1.xdf path/to/dir2`
-(directories is allways scanned recursively)
+
+Directories is allways scanned recursively
+
 
 ## Set output file
 `odmt --output new/output/destination`
