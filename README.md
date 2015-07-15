@@ -59,39 +59,49 @@ optional arguments:
   - Execute the `odmt` tool.
   - And show the result at `./output/merged.dxf`.
 
-## Set input files and/or directories
+## Options
+### Set input files and/or directories
 One or more files :
 `odmt --input path/to/file1.dxf path/to/file2.xdf`
 
 Mixing files an directories :
 `odmt --input path/to/dir1 path/to/file1.xdf path/to/dir2`
 
-Directories is allways scanned recursively
+Directories is allways scanned recursively.
 
+### Set output file
+Set the new output file path (with the extension) :
+`odmt --output new/output/destination.dxf`
 
-## Set output file
-`odmt --output new/output/destination`
-
-## Set search filters
-Merge only files matching this filters.
+### Set search filters
+Merge only files matching `.dxf` file extenssion :
 `odmt --search *.dxf`
+
+Merge only files matching customs `.merge.dxf` and `.scad.dxf` file extenssions :
 `odmt --search *.merge.dxf *.scad.dxf`
 
-## Set ignore filters
-Set ignored files and/or directories filters.
+### Set ignore filters
+Ignore all files wite `.ignore.dxf` extenssion :
 `odmt --ignore *.ignore.dxf`
+
+Ignore all dxf files stating by a `_` and all files/directories containing `backup` and/or `old` keywords in here name :
 `odmt --ignore _*.dxf *backup* *old*`
 
-## Set colors table
-Set the indexed layers color table, see [AutoCAD Color Index](http://sub-atomic.com/~moses/acadcolors.html) for more information.
+### Set colors table
+Set the indexed layers color table :
 `odmt --colors 1 2 3 20 90`
 
-## No layers
-If set, all files will be merged into the same layer.
+See [AutoCAD Color Index](http://sub-atomic.com/~moses/acadcolors.html) for an complete list.
+
+### No layers
+Merged all files into the same layer :
 `odmt --nolayers`
 
-## Just convert LINE to POLYLINE
-By passing a single input file to `odmt` it is possible to just convert is continuous LINE to one POLYLINE.
+### Just convert LINE to POLYLINE
+By passing a single input file to `odmt` it is possible to just convert is continuous LINE to POLYLINE.
+
+Convert and save a new file :
 `odmt --input file.dxf --output new_file.dxf`
-or overwrite the old
+
+Convert and overwrite the old file :
 `odmt --input file.dxf --output file.dxf`
