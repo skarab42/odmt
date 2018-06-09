@@ -197,7 +197,7 @@ def dxf_merge(files, colors = range(0, 256), nolayer = False):
 
         # create layer
         if layer_num < 2 or nolayers == False:
-            dwg.layers.create(
+            dwg.layers.new(
                 name       = layer_name, 
                 dxfattribs = {'color': layer_color})
 
