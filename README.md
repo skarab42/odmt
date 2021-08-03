@@ -4,24 +4,14 @@ OpenSCAD have two missing things when you export a DXF file :
 - no support for polylines
 - no support for layers
   
-No worries, the `odmt` tool tries to fill this gap. Written in Python with the help of the [ezdxf](https://bitbucket.org/mozman/ezdxf) library, `odmt` takes as argument one or more paths to DXF files and/or one or more paths to directories containing DXF files to merge together, each file is merged into a separate colored layer. On top of that, `odmt` converts all continuous segments (LINE) into a single polyline. More options explained below.
+No worries, the `odmt` tool tries to fill this gap. Written in Python with the help of the [ezdxf](https://pypi.org/project/ezdxf/) library, `odmt` takes as argument one or more paths to DXF files and/or one or more paths to directories containing DXF files to merge together, each file is merged into a separate colored layer. On top of that, `odmt` converts all continuous segments (LINE) into a single polyline. More options explained below.
 
 > This is my first python program, be cool and suggest improvements, thanks.
-
-<img src="http://pix.slic.it/p/3zq" title="3D build" width="150" />
-<img src="http://pix.slic.it/p/3zp" title="base.dxf" width="150" />
-<img src="http://pix.slic.it/p/3zr" title="holes.dxf" width="150" />
-<img src="http://pix.slic.it/p/3zo" title="pockets.dxf" width="150" />
-<img src="http://pix.slic.it/p/3zm" title="merged.dxf" width="615" />
 
 # Installation
 Simply copy the `odmt` script (odmt.py) to your favorite location and install the ezdxf library.
 ```
 pip install ezdxf
-```
-or more simple clone the repository (the ezpdf library is packed with)
-```
-git clone https://github.com/lautr3k/odmt.git
 ```
 
 # Usage
@@ -99,7 +89,7 @@ Set the indexed layers color table :
 
 `odmt --colors 1 2 3 20 90`
 
-See [AutoCAD Color Index](http://sub-atomic.com/~moses/acadcolors.html) for an complete list.
+See [AutoCAD Color Index](https://gohtx.com/acadcolors.php) for an complete list.
 
 ### No layers
 Merged all files into the same layer :
