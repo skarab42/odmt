@@ -197,9 +197,14 @@ def dxf_merge(files, colors = range(0, 256), nolayer = False):
 
         # create layer
         if layer_num < 2 or nolayers == False:
-            dwg.layers.create(
-                name       = layer_name, 
-                dxfattribs = {'color': layer_color})
+            try:
+                dwg.layers.create(
+                    name       = layer_name,
+                    dxfattribs = {'color': layer_color})
+            except AttributeError: # new syntax
+                dwg.layers.new(
+                    name       = layer_name,
+                    dxfattribs = {'color': layer_color})
 
         # parse file
         polylines = dxf_parse(file)
